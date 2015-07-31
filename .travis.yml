@@ -1,5 +1,5 @@
 language: java
-script: xvfb-run --server-args='-screen 0, 1024x768x16' ant test -Djitsi-meet.instance.url="https://meet.jit.si"
+script: Xvfb :1 -screen 5 1024x768x8 &;export DISPLAY=:1.5;ant test -Djitsi-meet.instance.url="https://meet.jit.si"
 notifications:
   # Email notifications are disabled to not annoy anybody.
   # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more
