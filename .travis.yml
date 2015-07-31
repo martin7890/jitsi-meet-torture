@@ -1,5 +1,5 @@
 language: java
-script: ant clean test -Djitsi-meet.instance.url="https://meet.jit.si"
+script: ant test -Djitsi-meet.instance.url="https://meet.jit.si"
 notifications:
   # Email notifications are disabled to not annoy anybody.
   # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more
