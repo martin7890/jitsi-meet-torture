@@ -1,7 +1,9 @@
 language: java
 script: 
-  - Xvfb :1 -screen 5 1024x768x8 &
-  - export DISPLAY=:1.5
+  #- Xvfb :1 -screen 5 1024x768x8 &
+  #- export DISPLAY=:1.5
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
   - ant test -Djitsi-meet.instance.url="https://meet.jit.si"
 notifications:
   # Email notifications are disabled to not annoy anybody.
